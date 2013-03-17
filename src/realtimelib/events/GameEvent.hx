@@ -5,7 +5,7 @@ import flash.events.Event;
 /**
  * Game status event
  */
-public class GameEvent extends Event
+class GameEvent extends Event
 {
 	public static const START_GAME:String = "startGame";
 	public static const GAME_OVER:String = "gameOver";
