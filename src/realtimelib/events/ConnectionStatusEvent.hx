@@ -18,6 +18,11 @@ class ConnectionStatusEvent extends Event
 	
 	public var status:UInt = UNINITIALIZED;
 	
+	public function new(type:String, status:UInt, bubbles:Bool=false, cancelable:Bool=false)
+	{
+		ConnectionStatusEvent(type, status, bubbles, cancelable);
+	}
+
 	public function ConnectionStatusEvent(type:String, status:UInt, bubbles:Bool=false, cancelable:Bool=false)
 	{
 		super(type, bubbles, cancelable);

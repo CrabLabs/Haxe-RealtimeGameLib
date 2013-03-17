@@ -28,6 +28,14 @@ class PeerStatusEvent extends Event
 	// state
 	private var m_info:Object;
 
+	public function new(type:String, 
+						  bubbles:Bool=false, 
+						  cancelable:Bool=false, 
+						  info:Dynamic=null) 
+	{
+		PeerStatusEvent(type, bubbles, cancelable, info);
+	}
+
 	/**
 	 *  
 	 * @param type
@@ -35,7 +43,7 @@ class PeerStatusEvent extends Event
 	 * @param cancelable
 	 * @param info
 	 * 
-	 */		
+	 */
 	public function PeerStatusEvent(type:String, 
 								  bubbles:Bool=false, 
 								  cancelable:Bool=false, 

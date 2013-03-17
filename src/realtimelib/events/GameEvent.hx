@@ -15,6 +15,11 @@ class GameEvent extends Event
 	public var playerID:String;
 	public var details:Dynamic;
 	
+	public function new(type:String, playerID:String, details:Dynamic=null, bubbles:Bool=false, cancelable:Bool=false)
+	{
+		GameEvent(type, playerID, details, bubbles, cancelable);
+	}
+
 	public function GameEvent(type:String, playerID:String, details:Dynamic=null, bubbles:Bool=false, cancelable:Bool=false)
 	{
 		super(type, bubbles, cancelable);

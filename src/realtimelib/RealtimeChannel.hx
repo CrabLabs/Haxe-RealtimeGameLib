@@ -1,3 +1,7 @@
+/*
+ *	TODO, Rodrigo.-
+ */
+
 package realtimelib;
 
 import flash.events.NetStatusEvent;
@@ -19,6 +23,11 @@ class RealtimeChannel
 			
 	private var client:Dynamic;
 	
+	public function new() 
+	{
+
+	}
+
 	public function RealtimeChannel(connection:NetConnection, peerID:String, myPeerID:String,client:Dynamic)
 	{
 		Logger.log("create RealtimeChannel and listen to: "+peerID);

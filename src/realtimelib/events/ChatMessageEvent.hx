@@ -23,6 +23,11 @@ class ChatMessageEvent extends Event
 	public var details:Dynamic;
 	public var receiver:Dynamic;
 	
+	public function new(type:String, message:Dynamic, bubbles:Bool=false, cancelable:Bool=false)
+	{
+		ChatMessageEvent(type, message, bubbles, cancelable);
+	}
+
 	public function ChatMessageEvent(type:String, message:Dynamic, bubbles:Bool=false, cancelable:Bool=false)
 	{
 		super(type, bubbles, cancelable);

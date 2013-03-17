@@ -13,6 +13,11 @@ class StatusInfoEvent extends Event
 
 	public var message:String;
 	
+	public function new(type:String, message:String, bubbles:Bool=false, cancelable:Bool=false)
+	{
+		StatusInfoEvent(type, message, bubbles, cancelable);
+	}
+
 	public function StatusInfoEvent(type:String, message:String, bubbles:Bool=false, cancelable:Bool=false)
 	{
 		super(type, bubbles, cancelable);
