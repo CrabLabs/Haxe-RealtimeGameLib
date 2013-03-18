@@ -23,12 +23,12 @@ class RealtimeChannel
 			
 	private var client:Dynamic;
 	
-	public function new() 
+	public function new(connection:NetConnection, peerID:String, myPeerID:String, client:Dynamic) 
 	{
-
+		RealtimeChannel(connection, peerID, myPeerID, client);
 	}
 
-	public function RealtimeChannel(connection:NetConnection, peerID:String, myPeerID:String,client:Dynamic)
+	public function RealtimeChannel(connection:NetConnection, peerID:String, myPeerID:String, client:Dynamic)
 	{
 		Logger.log("create RealtimeChannel and listen to: "+peerID);
 		this.peerID = peerID;
