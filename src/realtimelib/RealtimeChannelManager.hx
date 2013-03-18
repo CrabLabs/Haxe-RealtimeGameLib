@@ -17,7 +17,7 @@ import flash.net.NetStream;
  */
 class RealtimeChannelManager
 {
-	public var realtimeChannels:Vector.<RealtimeChannel>;
+	public var realtimeChannels:Array<RealtimeChannel>;
 	
 	private var session:ISession
 	public var sendStream:NetStream;
@@ -32,7 +32,7 @@ class RealtimeChannelManager
 	{
 		this.session = session;
 		this.streamMethod = streamMethod;
-		realtimeChannels = new Vector.<RealtimeChannel>();
+		realtimeChannels = new Array<RealtimeChannel>();
 		initSendStream();
 	}
 	/**
@@ -50,7 +50,8 @@ class RealtimeChannelManager
 	 * Removes RealtimeChannel by peerID.
 	 * @param peerID Remove RealtimeChannel by peerID.
 	 */
-	public function removeRealtimeChannel(peerID:String):void{
+	public function removeRealtimeChannel(peerID:String):Void
+	{
 		for(var i:uint = 0;i<realtimeChannels.length;i++){
 			if(realtimeChannels[i].peerID == peerID){
 				realtimeChannels[i].close();
@@ -60,23 +61,23 @@ class RealtimeChannelManager
 		}
 	}
 	
-	protected function netStatus(event:NetStatusEvent):void{
+	public function netStatus(event:NetStatusEvent):Void
+	{
 		Logger.log("SendStream: "+event.info.code);
 	}
 	
-	protected function initSendStream():void{
-		
+	public function initSendStream():Void
+	{
 		sendStream = new NetStream(session.connection,streamMethod);
 		sendStream.addEventListener(NetStatusEvent.NET_STATUS, netStatus,false,0,true);
 		sendStream.publish("media");
 		
-		var sendStreamClient:Object = new Object();
-		sendStreamClient.onPeerConnect = function(callerns:NetStream):Boolean{
+		var sendStreamClient:Dynamic = {};
+		sendStreamClient.onPeerConnect = function(callerns:NetStream):Bool
+		{
 			Logger.log("onPeerConnect "+callerns.farID);
-			
 			return true;
 		}
-		
 		sendStream.client = sendStreamClient;
 	}
 }

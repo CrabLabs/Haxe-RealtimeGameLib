@@ -41,10 +41,12 @@ class RealtimeChannel
 		receiveStream.play("media");
 	}
 	
-	public function close():void{
+	public function close():Void
+	{
 		receiveStream.close();
 	}
-	protected function netStatus(event:NetStatusEvent):void{
+	public function netStatus(event:NetStatusEvent):Void
+	{
 		Logger.log("receiveStream: "+event.info.code);
 	}
 }

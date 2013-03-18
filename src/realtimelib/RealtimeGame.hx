@@ -11,7 +11,7 @@ import flash.events.Event;
  * Creates game on FMS server and allows RTMFP/RTMP bridge communication
  * Warning: not implemented yet
  */
-public class RealtimeGame// implements IRealtimeGame
+class RealtimeGame// implements IRealtimeGame
 {
 	public function new()
 	{
@@ -22,148 +22,148 @@ public class RealtimeGame// implements IRealtimeGame
 		//TODO: implement function
 	}
 	
-	public function connect(userName:String, userDetails:Object=null):void
+	public function connect(userName:String, userDetails:Object=null):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function close():void
+	public function close():Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendMessage(message:String):void
+	public function sendMessage(message:String):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendMousePositions(x:int, y:int):void
+	public function sendMousePositions(x:Int, y:Int):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendMovement(direction:int, down:Boolean):void
+	public function sendMovement(direction:Int, down:Bool):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendPosition(position:Object):void
+	public function sendPosition(position:Dynamic):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendRotation(rotation:Number):void
+	public function sendRotation(rotation:Float):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendSpeed(speed:Number):void
+	public function sendSpeed(speed:Float):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function sendObject(object:*):void
+	public function sendObject(object:*):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function receiveMovement(peerID:String, direction:int, down:Boolean):void
+	public function receiveMovement(peerID:String, direction:Int, down:Bool):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function receivePosition(peerID:String, position:Object):void
+	public function receivePosition(peerID:String, position:Dynamic):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function receiveMousePositions(peerID:String, x:int, y:int):void
+	public function receiveMousePositions(peerID:String, x:Int, y:Int):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function receiveRotation(peerID:String, rotation:Number):void
+	public function receiveRotation(peerID:String, rotation:Float):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function receiveSpeed(peerID:String, speed:Number):void
+	public function receiveSpeed(peerID:String, speed:Float):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function setReceiveMovementCallback(fnc:Function):void
+	public function setReceiveMovementCallback(fnc:Function):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function setReceivePositionCallback(fnc:Function):void
+	public function setReceivePositionCallback(fnc:Function):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function setReceiveMousePositionCallback(fnc:Function):void
+	public function setReceiveMousePositionCallback(fnc:Function):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function setReceiveRotationCallback(fnc:Function):void
+	public function setReceiveRotationCallback(fnc:Function):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function setReceiveSpeedCallback(fnc:Function):void
+	public function setReceiveSpeedCallback(fnc:Function):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function get myUser():Object
-	{
-		//TODO: implement function
-		return null;
-	}
-	
-	public function get userList():Object
+	public function get myUser():Dynamic
 	{
 		//TODO: implement function
 		return null;
 	}
 	
-	public function get userListArray():Array
+	public function get userList():Dynamic
 	{
 		//TODO: implement function
 		return null;
 	}
 	
-	public function get userListMap():Object
+	public function get userListArray():Array<Dynamic>
 	{
 		//TODO: implement function
 		return null;
 	}
 	
-	public function addEventListener(type:String, listener:Function, useCapture:Boolean=false, priority:int=0, useWeakReference:Boolean=false):void
+	public function get userListMap():Dynamic
+	{
+		//TODO: implement function
+		return null;
+	}
+	
+	public function addEventListener(type:String, listener:Function, useCapture:Bool=false, priority:Int=0, useWeakReference:Bool=false):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function removeEventListener(type:String, listener:Function, useCapture:Boolean=false):void
+	public function removeEventListener(type:String, listener:Function, useCapture:Bool=false):Void
 	{
 		//TODO: implement function
 	}
 	
-	public function dispatchEvent(event:Event):Boolean
+	public function dispatchEvent(event:Event):Bool
 	{
 		//TODO: implement function
 		return false;
 	}
 	
-	public function hasEventListener(type:String):Boolean
+	public function hasEventListener(type:String):Bool
 	{
 		//TODO: implement function
 		return false;
 	}
 	
-	public function willTrigger(type:String):Boolean
+	public function willTrigger(type:String):Bool
 	{
 		//TODO: implement function
 		return false;

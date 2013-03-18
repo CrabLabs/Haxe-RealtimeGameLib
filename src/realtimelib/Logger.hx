@@ -17,6 +17,11 @@ class Logger
 	
 	public static var txtArea:TextField;
 	
+	public function new()
+	{
+		Logger();
+	}
+
 	public function Logger()
 	{
 	}
